@@ -1,0 +1,254 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Body Styling - Dark Mode */
+body {
+  background-color: #1c1c1e; /* Dark background */
+  color: #e0e0e0; /* Light text for contrast */
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 20px;
+  position: relative;
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin: 20px 0;
+  color: #a1ffb0; /* Green color for text */
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 40px; /* Adjust the gap between h1 and p */
+}
+
+header h1 {
+  margin: 0; /* Remove default margin */
+  font-size: 50px; /* Ensure size matches with p */
+}
+
+header p {
+  margin: 0; /* Remove default margin */
+  font-size: 50px; /* Match font size with h1 */
+  font-weight: bold; /* Same weight as h1 */
+  background: linear-gradient(
+    135deg,
+    #000000,
+    #00c853,
+    #009688,
+    #3b82f6,
+    #00c4ff
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5),
+    0px 0px 10px rgba(0, 144, 255, 0.4);
+}
+
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding: 0 10px;
+}
+
+/* Card - Dark Mode */
+.card {
+  background: #000;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #32ff7e; /* Green border */
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #32ff7e; /* Green color for headings */
+  margin-bottom: 15px;
+}
+
+.card p,
+.card ul {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card li {
+  padding: 5px 0;
+  border-bottom: 1px solid #000;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center; /* Center the footer content */
+  padding: 20px;
+  color: #e0e0e0;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.contact {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.contact ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.contact i {
+  margin-right: 10px;
+  color: #1abc9c;
+  font-size: 1.4em;
+}
+
+.contact a {
+  color: #1abc9c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr; /* Two columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* One column on small screens */
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  .card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 2rem; /* Smaller size for extra small screens */
+  }
+  header p {
+    font-size: 0.8rem; /* Smaller size for extra small screens */
+  }
+  .card h3 {
+    font-size: 1.2rem; /* Smaller headings for cards */
+  }
+}
+
+/* Section - Dark Mode */
+section {
+  background: #2a2a2c;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #32ff7e; /* Green border */
+  color: #e0e0e0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Key Skills - Remove bullets */
+.key-skills ul {
+  list-style-type: none; /* Remove bullets */
+  padding-left: 0; /* Remove left padding */
+}
+
+.key-skills li {
+  padding: 5px 0; /* Optional: keep some padding */
+}
+
+/* Section Titles */
+h4 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  color: #32ff7e;
+}
+
+/* Grid Layout for Sections */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 0 auto;
+}
+
+/* Viền hoạt hình cho các card */
+.grid-container section {
+  position: relative; /* Tạo ngữ cảnh cho các phần tử con */
+  padding: 20px; /* Padding bên trong card */
+  margin: 20px; /* Margin giữa các card */
+  border-radius: 12px; /* Bo góc cho card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho card */
+}
+
+/* Border Animation Keyframes */
+@keyframes borderAnimation {
+  0% {
+    transform: translate(0); /* Vị trí ban đầu */
+  }
+  25% {
+    transform: translate(5px, 0); /* Di chuyển sang phải */
+  }
+  50% {
+    transform: translate(5px, 5px); /* Di chuyển xuống và sang phải */
+  }
+  75% {
+    transform: translate(0, 5px); /* Di chuyển sang trái */
+  }
+  100% {
+    transform: translate(0); /* Quay về vị trí ban đầu */
+  }
+}
+
+/* Border Animation */
+.grid-container section::before {
+  content: "";
+  position: absolute;
+  top: 0; /* Bắt đầu từ trên cùng */
+  left: 0; /* Bắt đầu từ bên trái */
+  right: 0; /* Đến bên phải */
+  bottom: 0; /* Đến dưới cùng */
+  border: 5px solid #16e732; /* Màu viền vàng */
+  border-radius: 12px; /* Bo góc cho viền */
+  z-index: -1; /* Để viền ở phía sau nội dung */
+  animation: borderAnimation 3s linear infinite; /* Hiệu ứng hoạt hình */
+}
